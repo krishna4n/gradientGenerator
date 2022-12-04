@@ -7,8 +7,9 @@ import {
   ColorPickersContainer,
   ColorPicker,
   CustomInput,
-  DictionaryContainer,
   CustomButton,
+  CustomList,
+  CustomListItem,
 } from './styledComponents'
 
 const gradientDirectionsList = [
@@ -69,18 +70,19 @@ class Generator extends Component {
         color1={color1Display}
         color2={color2Display}
       >
-        <Heading>Generate CSS Color Gradient</Heading>
+        <Heading>Generate a CSS Color Gradient</Heading>
         <Paragraph>Choose Direction</Paragraph>
-        <DictionaryContainer>
+        <CustomList>
           {gradientDirectionsList.map(each => (
-            <DirectionItem
-              key={each.directionId}
-              direction={each}
-              tabClicked={this.onTabClicked}
-              activeTab={direction}
-            />
+            <CustomListItem key={each.directionId}>
+              <DirectionItem
+                direction={each}
+                tabClicked={this.onTabClicked}
+                activeTab={direction}
+              />
+            </CustomListItem>
           ))}
-        </DictionaryContainer>
+        </CustomList>
         <Paragraph>Pick the Colors</Paragraph>
         <ColorPickersContainer>
           <ColorPicker>

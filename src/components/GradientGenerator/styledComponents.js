@@ -26,8 +26,6 @@ export const ColorPickersContainer = styled.div`
 `
 export const CustomInput = styled.input``
 
-export const DictionaryContainer = styled(ColorPickersContainer)``
-
 export const Paragraph = styled.p``
 
 export const ColorPicker = styled.div`
@@ -37,7 +35,13 @@ export const ColorPicker = styled.div`
   justify-content: center;
   align-items: center;
 `
-
+export const CustomList = styled.ul`
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+export const CustomListItem = styled.li``
 export const CustomButton = styled.button`
   margin-top: 10px;
   background-color: #00c9b7;
